@@ -1,75 +1,78 @@
-# React + TypeScript + Vite
+# React Notes App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern note-taking application built with React, TypeScript, and React Query. Features include note creation, search functionality with debouncing, and pagination for efficient note management.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[View Live Demo](https://react-notes-app-iota-eight.vercel.app/)**
 
-## React Compiler
+Deployed on Vercel
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 📋 Description
 
-Note: This will impact Vite dev & build performances.
+This application provides a clean and intuitive interface for managing personal notes. Users can create, search, and browse through notes with a responsive design. The app uses React Query for efficient data fetching and caching, Formik for form handling with validation, and implements debounced search to optimize API calls.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Create Notes**: Add new notes using a modal form with validation
+- **Search Functionality**: Real-time search with debouncing to reduce API calls
+- **Pagination**: Navigate through notes with page controls
+- **Form Validation**: Client-side validation using Formik and Yup
+- **Optimized Data Fetching**: React Query integration for caching and state management
+- **Responsive Design**: Mobile-friendly interface
+- **TypeScript**: Full type safety throughout the application
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Technologies
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React** 19.1 - UI library
+- **TypeScript** 5.9 - Type-safe JavaScript
+- **Vite** 7.1 - Build tool and dev server
+- **React Query** (@tanstack/react-query) 5.90 - Data fetching and caching
+- **Formik** 2.4 - Form management
+- **Yup** 1.7 - Schema validation
+- **Axios** 1.12 - HTTP client
+- **React Paginate** 8.3 - Pagination component
+- **use-debounce** 10.0 - Debouncing hook
+- **Modern Normalize** 3.0 - CSS normalization
+- **ESLint** - Code linting
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Alona-Volvach/react-notes-app.git
+
+# Navigate to project directory
+cd react-notes-app
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎯 Usage
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Create a Note**: Click the "Create note +" button to open the modal form
+2. **Search Notes**: Use the search box to filter notes by content
+3. **Navigate Pages**: Use pagination controls when there are multiple pages
+4. **View Notes**: Browse through your notes in a card-based layout
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📝 Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint
+
+## 👤 Author
+
+**Alona Volvach**
+
+- LinkedIn: [linkedin.com/in/alona-volvach](https://www.linkedin.com/in/alona-volvach/)
+- GitHub: [@Alona-Volvach](https://github.com/Alona-Volvach)
+
+## 📄 License
+
+This project is open source and available for educational purposes.
